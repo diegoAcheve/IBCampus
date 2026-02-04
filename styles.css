@@ -1,0 +1,431 @@
+/*
+------PALETA DE COLORES------------
+
+- Beige: #f6f1ea
+- Dorado: #7d613b
+- Verde Oscuro: #002729
+- Azul: #073776
+
+*/
+/* Variables CSS */
+:root {
+    --primary-color: #073776;
+    --secondary-color: #7d613b;
+    --accent-color: #911010;
+    --light-color: #f6f1ea;
+    --dark-color: #002729;
+}
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'CodePro';
+  src: url('resources/fonts/4124-font.woff2') format('woff2'),
+       url('resources/fonts/4124-font.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Estilos generales */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding-top: 76px;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CodePro', sans-serif;
+  font-weight: 700;
+}
+
+.icons h5 {
+    color: var(--primary-color);
+    padding-top: 10px;
+}
+
+.container-main {
+    min-height: calc(100vh - 250px);
+}
+.unete{
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    border-color: var(--secondary-color);
+    color: var(--light-color);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.btn-unete :hover{
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a73e8 100%);
+    border-color: var(--secondary-color);
+    color: var(--light-color);
+    border-radius: 50px;
+    border: none;
+}
+.btn-unete {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a73e8 100%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+.unete:hover {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--primary-color);
+}
+
+
+/* Barra de navegación */
+.navbar-brand {
+    font-weight: 700;
+    color: var(--secondary-color) !important;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+/* Títulos y textos */
+.hero-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    color: #555;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+/* Carrusel */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 20px;
+}
+
+/* Sección de Galeria */
+.team-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.team-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px auto 15px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos adicionales para las nuevas secciones */
+.marketing-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    padding: 20px 15px;
+    border: 1px solid #eee;
+}
+
+.marketing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    border-color: var(--secondary-color);
+}
+
+.marketing-img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    border: 5px solid var(--secondary-color);
+}
+
+.marketing-name {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Información del curso */
+.course-info-column {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.course-info-column:hover {
+    transform: translateY(-5px);
+}
+
+.course-info-column h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Columnas de características */
+.text-center.p-3 {
+    transition: transform 0.3s;
+}
+
+.text-center.p-3:hover {
+    transform: translateY(-5px);
+}
+
+.text-center.p-3 i {
+    color: var(--secondary-color);
+}
+
+/* Pie de página */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.footer h5 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* Tarjetas de profesores */
+.photo-card-small {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.photo-card-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-color);
+}
+
+.photo-img-small {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+    margin: 0 auto 15px;
+}
+
+.photo-card-small h5 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.photo-card-small h6 {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.photo-card-small p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    color: #666;
+}
+
+.img-small {
+    width: 106px;
+    height: 60px;
+}
+
+.list-number{
+    width: 40px; height: 40px; min-width: 40px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.marketing-row .col-md-6 {
+        margin-bottom: 30px;
+    }
+
+/* Alertas */
+.alert-info {
+    border-left: 4px solid var(--secondary-color);
+}
+.alert-danger {
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Ajustes para pantallas grandes (5 tarjetas por fila) */
+@media (min-width: 992px) {
+    .col-custom-5 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .col-custom-5 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .col-custom-5 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 575px) {
+    .col-custom-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .team-member {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .team-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5rem;
+    }
+
+    .course-info-column {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        margin-top: 2rem;
+        padding: 1.5rem 0 1rem;
+    }
+
+    .footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer .text-center p {
+        margin-bottom: 6rem !important;
+    }
+
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+
+    .marketing-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profesor-card-small {
+        padding: 12px;
+    }
+
+    .profesor-img-small {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 769px) and (max-width: 992px) {
+    .team-img {
+        width: 180px;
+        height: 180px;
+    }
+}
