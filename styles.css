@@ -56,29 +56,20 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     overflow: hidden;
 }
-.btn-unete :hover{
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1a73e8 100%);
+.btn-curso{
+    background: var(--light-color);
     border-color: var(--secondary-color);
-    color: var(--light-color);
-    border-radius: 50px;
-    border: none;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
-.btn-unete {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a73e8 100%);
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-            padding: 15px 40px;
-            border-radius: 50px;
-            border: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
-            position: relative;
-            overflow: hidden;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        
+.btn-curso:hover{
+    background: var(--light-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--secondary-color);
+}
 .unete:hover {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
@@ -329,7 +320,12 @@ h1, h2, h3, h4, h5, h6 {
 .marketing-row .col-md-6 {
         margin-bottom: 30px;
     }
-
+.marketing-card i{
+    color: var(--primary-color);
+}
+.marketing-card a{
+    text-decoration: none;
+}
 /* Alertas */
 .alert-info {
     border-left: 4px solid var(--secondary-color);
